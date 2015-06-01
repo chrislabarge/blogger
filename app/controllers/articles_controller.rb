@@ -9,6 +9,8 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@comment = Comment.new
+		@comment.article_id = @article.id #this is so we can create a new comment on a article page
 	end
 
 	def new
