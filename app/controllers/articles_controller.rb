@@ -39,7 +39,7 @@ class ArticlesController < ApplicationController
 		#@article.body =  params[:article][:body]
 		@article.save
 		
-		flash.notice = "Article '#{@atricle.title}' Created!"
+		flash.notice = "Article '#{@article.title}' Created!"
 
 		redirect_to article_path(@article)
 	end
@@ -48,7 +48,7 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 		@article.destroy
 		
-		flash.notic = "Article '#{@article.title}' Destroyed!"
+		flash.notice = "Article '#{@article.title}' Destroyed!"
 
 		redirect_to articles_path
 	end
